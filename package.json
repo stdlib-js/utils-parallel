@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-parallel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Execute scripts in parallel.",
   "license": "Apache-2.0",
   "author": {
