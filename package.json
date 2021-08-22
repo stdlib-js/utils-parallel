@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-parallel",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Execute scripts in parallel.",
   "license": "Apache-2.0",
   "author": {
@@ -19,7 +19,6 @@
   "main": "./lib",
   "browser": "./lib/browser/index.js",
   "directories": {
-    "bin": "./bin",
     "doc": "./docs",
     "example": "./examples",
     "lib": "./lib",
