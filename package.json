@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-parallel",
-  "version": "0.0.7",
+  "version": "0.0.0",
   "description": "Execute scripts in parallel.",
   "license": "Apache-2.0",
   "author": {
@@ -55,6 +55,7 @@
     "@stdlib/os-num-cpus": "^0.0.x",
     "@stdlib/process-cwd": "^0.0.x",
     "@stdlib/process-env": "^0.0.x",
+    "@stdlib/string-format": "^0.0.x",
     "@stdlib/utils-copy": "^0.0.x",
     "@stdlib/utils-keys": "^0.0.x",
     "debug": "^2.6.9"
