@@ -39,9 +39,12 @@ jobs:
       - name: Transform Error Messages
         id: transform-error-messages
         uses: stdlib-js/transform-errors-action@main
-      - name: Replace double quotes with single quotes in rewritten error messages
+      - name: Replace double quotes with single quotes in rewritten format string error messages
         run: |
           find . -name "*.js" -exec sed -E -i "s/Error\( format\( \"([a-zA-Z0-9]+)\"/Error\( format\( '\1'/g" {} \;
+      - name: Replace double quotes with single quotes in rewritten string literal error messages
+        run: |
+          find . -name "*.js" -exec sed -E -i "s/Error\( format\(\"([a-zA-Z0-9]+)\"\)/Error\( format\( '\1' \)/g" {} \;
       - name: Replace double quotes with single quotes in inserted `require` calls
         run: |
           find . -name "*.js" -exec sed -E -i "s/require\( ?\"@stdlib\/error-tools-fmtprodmsg\" ?\);/require\( '@stdlib\/error-tools-fmtprodmsg' \);/g" {} \;
