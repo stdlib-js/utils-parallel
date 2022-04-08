@@ -44,7 +44,7 @@ jobs:
           find . -name "*.js" -exec sed -E -i "s/Error\( format\( \"([a-zA-Z0-9]+)\"/Error\( format\( '\1'/g" {} \;
       - name: Replace double quotes with single quotes in inserted `require` calls
         run: |
-          find . -name "*.js" -exec sed -E -i "s/require\( \"@stdlib\/error-tools-fmtprodmsg\" \);/require\( '@stdlib\/error-tools-fmtprodmsg' \);/g" {} \;
+          find . -name "*.js" -exec sed -E -i "s/require\( ?\"@stdlib\/error-tools-fmtprodmsg\" ?\);/require\( '@stdlib\/error-tools-fmtprodmsg' \);/g" {} \;
       - name: Change `@stdlib/string-format` to `@stdlib/error-tools-fmtprodmsg` in package.json if the former is a dependency, otherwise insert it as a dependency
         run: |
           if grep -q '"@stdlib/string-format"' package.json; then
