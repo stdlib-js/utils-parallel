@@ -1,7 +1,7 @@
 #/
 # @license Apache-2.0
 #
-# Copyright (c) 2021 The Stdlib Authors.
+# Copyright (c) 2022 The Stdlib Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #/
 
 # Workflow name:
-name: transform_errors
+name: productionize
 
 # Workflow triggers:
 on:
@@ -26,16 +26,16 @@ on:
 
 # Workflow jobs:
 jobs:
-  transform-errors:
+  productionize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v3
         with:
           ref: main
-      - name: Create new `error` branch
+      - name: Create new `production` branch
         run: |
-          git checkout -b error
+          git checkout -b production
       - name: Transform Error Messages
         id: transform-error-messages
         uses: stdlib-js/transform-errors-action@main
@@ -53,7 +53,7 @@ jobs:
           if grep -q '"@stdlib/string-format"' package.json; then
             sed -i "s/\"@stdlib\/string-format\"/\"@stdlib\/error-tools-fmtprodmsg\"/g" package.json
           else
-            sed -i "s/\"dependencies\": {/\"dependencies\": {\\n    \"@stdlib\/error-tools-fmtprodmsg\": \"^0.0.x\"/g" package.json
+            sed -i "s/\"dependencies\": {/\"dependencies\": {\\n    \"@stdlib\/error-tools-fmtprodmsg\": \"^0.0.x\",/g" package.json
           fi
       - name: Configure git
         run: |
@@ -62,9 +62,9 @@ jobs:
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto-generated commit"
+          git commit -m "Transform error messages"
       - name: Push changes
         run: |
           SLUG=${{ github.repository }}
           echo "Pushing changes to $SLUG..."
-          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$SLUG.git" error --force
+          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$SLUG.git" production --force
