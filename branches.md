@@ -46,7 +46,7 @@ click E href "https://github.com/stdlib-js/utils-parallel/tree/deno"
 click F href "https://github.com/stdlib-js/utils-parallel/tree/umd"
 ```
 
-[stdlib-url]: https://github.com/stdlib-js/utils-parallel
+[stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/utils/parallel
 [production-url]: https://github.com/stdlib-js/utils-parallel/tree/production
 [deno-url]: https://github.com/stdlib-js/utils-parallel/tree/deno
 [umd-url]: https://github.com/stdlib-js/utils-parallel/tree/umd
