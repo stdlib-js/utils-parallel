@@ -24,38 +24,31 @@ limitations under the License.
 
 > Execute scripts in parallel.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-parallel
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-parallel = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var parallel = require( 'path/to/vendor/umd/utils-parallel/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.parallel;
-})();
-</script>
+var parallel = require( '@stdlib/utils-parallel' );
 ```
 
 #### parallel( files, \[options,] clbk )
@@ -231,12 +224,7 @@ parallel( files, opts, done );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript">
-(function () {
+```javascript
 var fs = require( 'fs' );
 var path = require( 'path' );
 var writeFileSync = require( '@stdlib/fs-write-file' ).sync;
@@ -326,18 +314,71 @@ opts = {
 
 // Run all temporary scripts:
 parallel( files, opts, done );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/utils-parallel-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: parallel [options] <script1> <script2> ...
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --cmd cmd             Executable file/command.
+         --workers num         Number of workers.
+         --concurrency num     Number of scripts to run concurrently.
+         --ordered             Preserve order of script output.
+         --uid uid             Process user identity.
+         --gid gid             Process group identity.
+         --maxbuffer size      Max buffer size for stdout and stderr.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ parallel --cmd 'node' --workers 4 --concurrency 8 ./1.js ./2.js ./3.js ./4.js ./5.js ./6.js ./7.js ./8.js ./9.js ./10.js
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -405,6 +446,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [stdlib]: https://github.com/stdlib-js/stdlib
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
+
+[cli-section]: https://github.com/stdlib-js/utils-parallel#cli
+[cli-url]: https://github.com/stdlib-js/utils-parallel/tree/cli
+[@stdlib/utils-parallel]: https://github.com/stdlib-js/utils-parallel/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
