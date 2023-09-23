@@ -760,11 +760,15 @@ jobs:
           mkdir -p cli/docs cli/test
           cp README.md LICENSE CONTRIBUTORS NOTICE ./cli
           cp -r bin etc ./cli
-          cp test/test.cli.js ./cli/test
+          if [ -f test/test.cli.js ]; then 
+            cp test/test.cli.js ./cli/test
+          fi
           if [ -d "test/fixtures" ]; then
             cp -r test/fixtures ./cli/test
           fi
-          cp docs/usage.txt ./cli/docs
+          if [ -f docs/usage.txt ]; then 
+            cp docs/usage.txt ./cli/docs
+          fi
 
       # Install Node.js:
       - name: 'Install Node.js'
