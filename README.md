@@ -18,44 +18,48 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # Parallel
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Execute scripts in parallel.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-parallel
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-parallel = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var parallel = require( 'path/to/vendor/umd/utils-parallel/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.parallel;
-})();
-</script>
+var parallel = require( '@stdlib/utils-parallel' );
 ```
 
 #### parallel( files, \[options,] clbk )
@@ -231,12 +235,7 @@ parallel( files, opts, done );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript">
-(function () {
+```javascript
 var fs = require( 'fs' );
 var path = require( 'path' );
 var writeFileSync = require( '@stdlib/fs-write-file' ).sync;
@@ -326,18 +325,71 @@ opts = {
 
 // Run all temporary scripts:
 parallel( files, opts, done );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/utils-parallel-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: parallel [options] <script1> <script2> ...
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --cmd cmd             Executable file/command.
+         --workers num         Number of workers.
+         --concurrency num     Number of scripts to run concurrently.
+         --ordered             Preserve order of script output.
+         --uid uid             Process user identity.
+         --gid gid             Process group identity.
+         --maxbuffer size      Max buffer size for stdout and stderr.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ parallel --cmd 'node' --workers 4 --concurrency 8 ./1.js ./2.js ./3.js ./4.js ./5.js ./6.js ./7.js ./8.js ./9.js ./10.js
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -386,8 +438,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/utils-parallel.svg
 [npm-url]: https://npmjs.org/package/@stdlib/utils-parallel
 
-[test-image]: https://github.com/stdlib-js/utils-parallel/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/utils-parallel/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/utils-parallel/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/utils-parallel/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-parallel/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-parallel?branch=main
