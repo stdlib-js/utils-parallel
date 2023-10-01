@@ -62,7 +62,7 @@
   "devDependencies": {
     "@stdlib/fs-unlink": "^0.1.0",
     "@stdlib/fs-write-file": "^0.1.0",
-    "@stdlib/random-base-minstd": "^0.0.6",
+    "@stdlib/random-base-minstd": "^0.1.0",
     "@stdlib/utils-next-tick": "^0.1.0",
     "@stdlib/utils-noop": "^0.1.0",
     "proxyquire": "^2.0.0",
