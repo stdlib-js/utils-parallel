@@ -66,9 +66,11 @@ var parallel = require( '@stdlib/utils-parallel' );
 
 Executes scripts in parallel.
 
+<!-- FIXME: revert back to JavaScript once can handle errors -->
+
 <!-- run-disable -->
 
-```javascript
+```text
 var files = [
     './a.js',
     './b.js'
@@ -98,9 +100,11 @@ The function accepts the following `options`:
 
 By default, the number of workers running scripts is equal to the number of CPUs minus `1` (master process). To adjust the number of workers, set the `workers` option.
 
+<!-- FIXME: revert back to JavaScript once can handle errors -->
+
 <!-- run-disable -->
 
-```javascript
+```text
 var files = [
     './a.js',
     './b.js'
@@ -124,9 +128,11 @@ parallel( files, opts, done );
 
 By default, the number of scripts running concurrently is equal to the number of workers. To adjust the concurrency, set the `concurrency` option.
 
+<!-- FIXME: revert back to JavaScript once can handle errors -->
+
 <!-- run-disable -->
 
-```javascript
+```text
 var files = [
     './a.js',
     './b.js'
@@ -158,9 +164,11 @@ $ node <script_path>
 
 To run scripts via an alternative executable or none at all, set the `cmd` option.
 
+<!-- FIXME: revert back to JavaScript once can handle errors -->
+
 <!-- run-disable -->
 
-```javascript
+```text
 var files = [
     './a.js',
     './b.js'
@@ -184,9 +192,11 @@ parallel( files, opts, done );
 
 By default, the `stdio` output for each script is interleaved; i.e., the `stdio` output from one script **may** be interleaved with the `stdio` output from one or more other scripts. To preserve the `stdio` output order for each script, set the `ordered` option to `true`.
 
+<!-- FIXME: revert back to JavaScript once can handle errors -->
+
 <!-- run-disable -->
 
-```javascript
+```text
 var files = [
     './a.js',
     './b.js'
@@ -229,9 +239,11 @@ parallel( files, opts, done );
 
 ## Examples
 
+<!-- FIXME: re-enable running of code block once able to set `maxBuffer` configuration -->
+
 <!-- run-disable -->
 
-<!-- FIXME: re-enable running of code block once able to set `maxBuffer` configuration -->
+<!-- eslint-disable node/no-sync -->
 
 <!-- eslint no-undef: "error" -->
 
