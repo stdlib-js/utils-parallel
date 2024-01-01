@@ -35,31 +35,14 @@ limitations under the License.
 
 > Execute scripts in parallel.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/utils-parallel
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var parallel = require( '@stdlib/utils-parallel' );
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@esm/index.mjs';
 ```
 
 #### parallel( files, \[options,] clbk )
@@ -247,12 +230,17 @@ parallel( files, opts, done );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
 var fs = require( 'fs' );
 var path = require( 'path' );
-var writeFileSync = require( '@stdlib/fs-write-file' ).sync;
-var unlinkSync = require( '@stdlib/fs-unlink' ).sync;
-var parallel = require( '@stdlib/utils-parallel' );
+var writeFileSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-write-file' ).sync;
+var unlinkSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink' ).sync;
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@esm/index.mjs';
 
 var nFiles = 100;
 var files;
@@ -337,71 +325,17 @@ opts = {
 
 // Run all temporary scripts:
 parallel( files, opts, done );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
-* * *
 
-<section class="cli">
-
-## CLI
-
-<section class="installation">
-
-## Installation
-
-To use as a general utility, install the CLI package globally
-
-```bash
-npm install -g @stdlib/utils-parallel-cli
-```
-
-</section>
-
-<!-- CLI usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```text
-Usage: parallel [options] <script1> <script2> ...
-
-Options:
-
-  -h,    --help                Print this message.
-  -V,    --version             Print the package version.
-         --cmd cmd             Executable file/command.
-         --workers num         Number of workers.
-         --concurrency num     Number of scripts to run concurrently.
-         --ordered             Preserve order of script output.
-         --uid uid             Process user identity.
-         --gid gid             Process group identity.
-         --maxbuffer size      Max buffer size for stdout and stderr.
-```
-
-</section>
-
-<!-- /.usage -->
-
-<section class="examples">
-
-### Examples
-
-```bash
-$ parallel --cmd 'node' --workers 4 --concurrency 8 ./1.js ./2.js ./3.js ./4.js ./5.js ./6.js ./7.js ./8.js ./9.js ./10.js
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -420,7 +354,7 @@ $ parallel --cmd 'node' --workers 4 --concurrency 8 ./1.js ./2.js ./3.js ./4.js 
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
