@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@esm/index.mjs';
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@v0.3.0-esm/index.mjs';
 ```
 
 #### parallel( files, \[options,] clbk )
@@ -240,7 +240,7 @@ var fs = require( 'fs' );
 var path = require( 'path' );
 var writeFileSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-write-file' ).sync;
 var unlinkSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink' ).sync;
-import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@esm/index.mjs';
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@v0.3.0-esm/index.mjs';
 
 var nFiles = 100;
 var files;
