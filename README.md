@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-parallel/tags). For example,
+
+```javascript
 import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@v0.3.1-esm/index.mjs';
 ```
 
@@ -240,7 +245,7 @@ var fs = require( 'fs' );
 var path = require( 'path' );
 var writeFileSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-write-file' ).sync;
 var unlinkSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink' ).sync;
-import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@v0.3.1-esm/index.mjs';
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@esm/index.mjs';
 
 var nFiles = 100;
 var files;
