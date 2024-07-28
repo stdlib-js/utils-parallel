@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@deno/mod.js';
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@v0.3.2-deno/mod.js';
 ```
 
 #### parallel( files, \[options,] clbk )
@@ -235,7 +235,7 @@ var fs = require( 'fs' );
 var path = require( 'path' );
 var writeFileSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-write-file' ).sync;
 var unlinkSync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-unlink' ).sync;
-import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@deno/mod.js';
+import parallel from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parallel@v0.3.2-deno/mod.js';
 
 var nFiles = 100;
 var files;
