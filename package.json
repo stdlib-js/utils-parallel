@@ -55,7 +55,7 @@
     "@stdlib/os-num-cpus": "^0.2.2",
     "@stdlib/process-cwd": "^0.2.2",
     "@stdlib/process-env": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/utils-keys": "^0.2.2",
     "debug": "^2.6.9",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
