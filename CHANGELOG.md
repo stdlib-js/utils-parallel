@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-01-06)
+## Unreleased (2026-01-10)
 
 <section class="bug-fixes">
 
 ### Bug Fixes
 
+-   [`20e08f9`](https://github.com/stdlib-js/stdlib/commit/20e08f9e46bae5fdc67e1d0f7e635be8afa3d1fd) - prevent deadlock on single-core systems and with empty arrays in `utils/parallel` [(#9597)](https://github.com/stdlib-js/stdlib/pull/9597)
 -   [`d2d06f4`](https://github.com/stdlib-js/stdlib/commit/d2d06f45f5df1d830aa0a14331bd6b883d9992d5) - avoid infinite recursion and update examples
 
 </section>
@@ -22,6 +23,7 @@
 
 <details>
 
+-   [`20e08f9`](https://github.com/stdlib-js/stdlib/commit/20e08f9e46bae5fdc67e1d0f7e635be8afa3d1fd) - **fix:** prevent deadlock on single-core systems and with empty arrays in `utils/parallel` [(#9597)](https://github.com/stdlib-js/stdlib/pull/9597) _(by Shivam Mittal, Athan Reines)_
 -   [`d2d06f4`](https://github.com/stdlib-js/stdlib/commit/d2d06f45f5df1d830aa0a14331bd6b883d9992d5) - **fix:** avoid infinite recursion and update examples _(by Athan Reines)_
 -   [`7add020`](https://github.com/stdlib-js/stdlib/commit/7add0201c13e56a0381926ccfd4073c84eaf2ed4) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
 -   [`07f7c05`](https://github.com/stdlib-js/stdlib/commit/07f7c0522c73e6ad9505e1d45035ae439344200d) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
@@ -37,10 +39,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Philipp Burckhardt
+-   Shivam Mittal
 
 </section>
 

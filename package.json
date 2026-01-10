@@ -52,6 +52,7 @@
     "@stdlib/assert-is-string-array": "^0.2.2",
     "@stdlib/cli-ctor": "^0.2.2",
     "@stdlib/fs-read-file": "^0.2.2",
+    "@stdlib/math-base-special-fast-max": "^0.3.0",
     "@stdlib/os-num-cpus": "^0.2.2",
     "@stdlib/process-cwd": "^0.2.2",
     "@stdlib/process-env": "^0.2.2",
