@@ -245,7 +245,7 @@ parallel( files, opts, done );
 
 <!-- run-disable -->
 
-<!-- eslint-disable node/no-sync -->
+<!-- eslint-disable n/no-sync -->
 
 <!-- eslint no-undef: "error" -->
 
