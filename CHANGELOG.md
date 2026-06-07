@@ -4,7 +4,19 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-04)
+## Unreleased (2026-06-07)
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#12434](https://github.com/stdlib-js/stdlib/issues/12434)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +24,7 @@
 
 <details>
 
+-   [`bf3e06d`](https://github.com/stdlib-js/stdlib/commit/bf3e06d5ab3b9dd46622b1b3c12a6337f094d0c2) - **chore:** fix JavaScript lint errors [(#12667)](https://github.com/stdlib-js/stdlib/pull/12667) _(by titanniya542-spec, Athan Reines)_
 -   [`cd99d80`](https://github.com/stdlib-js/stdlib/commit/cd99d8072389d37a05848951926c3fe51da19832) - **docs:** propagate fixes to sibling packages [(#11843)](https://github.com/stdlib-js/stdlib/pull/11843) _(by Philipp Burckhardt)_
 -   [`0dc62ae`](https://github.com/stdlib-js/stdlib/commit/0dc62ae39a4817ff888e9736c3ea599f6beff4e5) - **build:** replace `eslint-plugin-node` with `eslint-plugin-n` [(#10952)](https://github.com/stdlib-js/stdlib/pull/10952) _(by Philipp Burckhardt, Athan Reines)_
 
@@ -25,10 +38,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Philipp Burckhardt
+-   titanniya542-spec
 
 </section>
 
